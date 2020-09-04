@@ -4,24 +4,9 @@
 
     pip3 ---mac 
     pip ----win
-## case1
-```python
-import matplotlib.pyplot as plt
-import math
-
-aum=1
-#数组
-rec=[]
-#循环
-days=range(1,365)
-for day in days:
-    rec.append(aum)
-#画图
-plt.plot(days,rec)
-plt.title("name")
-```
+   
 ## 数据类型
-    字符串: ''或""
+### 字符串: ''或""
       name="my name is yyl1"
     字符串切片:
       name[0:2] 'my' 不包括最右边字符
@@ -57,7 +42,34 @@ plt.title("name")
         print('\\\t\\'） 结果为\     \
         print(r'\\\t\\') 结果为\\\t\\
 ```
-      
+### 列表list，元组tuple
+```python
+import matplotlib.pyplot as plt
+import math
+
+aum=1
+
+#列表
+rec=[]
+#元组
+rec=()
+#循环
+days=range(1,365)
+for day in days:
+    rec.append(aum) #添加一个元素
+    rec.extend([aum,aum1]) #添加一个列表
+    rec.count(aum) #统计列表中aum的个数
+    
+#集合 {}:实现去重,但没有顺序
+#集合方法 add(elm)
+rec_set=set(rec)
+rec_set.add(elm)
+#注意：集合不能切片，不能用rec_set[3]
+
+#画图
+plt.plot(days,rec)
+plt.title("name")
+```      
   
 
 
